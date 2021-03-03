@@ -1,0 +1,4 @@
+com/meituan/hotel/dsl/groovy/DslParamsTest.java
+ com.meituan.hotel.dsl.groovy.DslParamsTest
+com/meituan/hotel/dsl/groovy/DslHttpTest.java
+ com.meituan.hotel.dsl.groovy.DslHttpTest
