@@ -1,32 +1,19 @@
-plugins {
-    id 'groovy'
-    id 'java'
-    id 'java-library'
-}
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'java-library'
 
 group 'com.lesofn'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    api 'com.google.guava:guava:30.1-jre'
-    api 'org.codehaus.groovy:groovy-all:3.0.7'
-    api 'commons-io:commons-io:2.6'
-    api 'org.apache.commons:commons-lang3:3.9'
+    api 'com.google.guava:guava:31.0.1-jre'
+    api 'org.codehaus.groovy:groovy:3.0.8'
+    api 'commons-io:commons-io:2.11.0'
+    api "org.apache.commons:commons-lang3:3.12.0"
     api 'org.apache.commons:commons-collections4:4.4'
-    api 'org.slf4j:slf4j-api:1.7.30'
-    compile "org.projectlombok:lombok:1.18.16"
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-}
-
-test {
-    useJUnitPlatform()
+    api 'org.slf4j:slf4j-api:1.7.32'
+    compileOnly "org.projectlombok:lombok:1.18.22"
+    annotationProcessor "org.projectlombok:lombok:1.18.22"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }

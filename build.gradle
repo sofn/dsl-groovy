@@ -1,17 +1,18 @@
-plugins {
-    id 'java'
-    id 'idea'
-}
-group 'com.lesofn'
-version '1.0-SNAPSHOT'
+apply plugin: 'idea'
+apply plugin: 'java'
 
-repositories {
-    mavenCentral()
-}
+group 'com.github.sofn'
+version '1.0-SNAPSHOT'
 
 allprojects {
     sourceCompatibility = 11
     targetCompatibility = 11
+
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        mavenLocal()
+        mavenCentral()
+    }
 
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"

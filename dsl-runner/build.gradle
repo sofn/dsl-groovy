@@ -1,7 +1,5 @@
-plugins {
-    id 'java'
-    id 'java-library'
-}
+apply plugin: 'java'
+apply plugin: 'java-library'
 
 group 'com.lesofn'
 version '1.0-SNAPSHOT'
@@ -12,14 +10,7 @@ repositories {
 
 dependencies {
     implementation project(":dsl-define")
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-}
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-}
-
-test {
-    useJUnitPlatform()
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
